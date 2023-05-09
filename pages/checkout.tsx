@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { cart, cartTotal } from "@/store/storeSlice";
 import { useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import { Stripe } from "stripe";
 import { fetchPostJSON } from "@/utils/api-helpers";
 import getStripe from "@/utils/get-stripejs";
 
-const checkout = () => {
+const Checkout = () => {
   const [loading, setLoading] = useState(false);
   const items = useSelector(cart);
   const total = useSelector(cartTotal);
@@ -144,4 +144,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;

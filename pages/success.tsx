@@ -16,7 +16,7 @@ import { useSession } from "next-auth/react";
 interface Props {
   products: StripeProduct[];
 }
-const success = ({ products }: Props) => {
+const Success = ({ products }: Props) => {
   const [mounted, setMounted] = useState(false);
   const [showOrderSummary, setShowOrderSummary] = useState(false);
   const router = useRouter();
@@ -79,8 +79,8 @@ const success = ({ products }: Props) => {
                 Your order is confirmed
               </p>
               <p className="text-sm text-gray-600">
-                We've accepted your order, and we're getting it ready. Come back
-                to this page for updates on your shipment status.
+                We&apos;ve accepted your order, and we&apos;re getting it ready.
+                Come back to this page for updates on your shipment status.
               </p>
             </div>
             <div className="pt-3 text-sm">
@@ -93,7 +93,7 @@ const success = ({ products }: Props) => {
           <div className="my-4 mx-4 space-y-2 rounded-md border border-gray-300 p-4 lg:ml-2 ">
             <p>Order updates</p>
             <p className="text-sm text-gray-600">
-              You'll get shipping and delivery updates by email and text.
+              You&apos;ll get shipping and delivery updates by email and text.
             </p>
           </div>
           <div>
@@ -202,7 +202,7 @@ const success = ({ products }: Props) => {
   );
 };
 
-export default success;
+export default Success;
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const sessionId = query.session_id as string;
