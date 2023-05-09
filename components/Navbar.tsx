@@ -50,10 +50,10 @@ const Navbar = ({ show, setShow }: Props) => {
       const currentScrollPos = window.pageYOffset;
 
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("nav-scroll").style.background = "#e7ecee";
-        document.getElementById("nav-scroll").style.top = "0px";
+        document.getElementById("nav-scroll")!.style.background = "#e7ecee";
+        document.getElementById("nav-scroll")!.style.top = "0px";
       } else {
-        document.getElementById("nav-scroll").style.top = "-60px";
+        document.getElementById("nav-scroll")!.style.top = "-60px";
       }
       prevScrollpos = currentScrollPos;
     };
