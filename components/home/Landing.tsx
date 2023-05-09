@@ -11,7 +11,7 @@ const Landing = () => {
   const router = useRouter();
   return (
     <section className="sticky top-0 h-screen w-full   ">
-      <div className="container h-full flex flex-col justify-end md:flex-row  md:items-center  ">
+      <div className="container h-full flex flex-col justify-center md:flex-row  md:items-center  ">
         <motion.div
           initial={{
             y: 30,
@@ -25,7 +25,7 @@ const Landing = () => {
             delay: 1.5,
             duration: 0.4,
           }}
-          className="mb-5 md:mb-0"
+          className="mb-[9vh] md:mb-0"
         >
           <h1 className="flex flex-col space-y-3 text-2xl leading-6 md:leading-10 font-semibold tracking-wide md:text-4xl lg:text-5xl xl:text-6xl">
             <span className="gradient bg-clip-text text-transparent">
@@ -56,7 +56,7 @@ const Landing = () => {
           transition={{
             delay: 1.5,
           }}
-          className="relative h-[450px] w-full max-w-[450px] transition-all duration-500 lg:h-[650px] lg:w-[600px] mx-auto"
+          className="relative -mb-[6vh] md:mb-0  w-[320px] h-[320px] md:h-[450px] md:w-full max-w-[450px] transition-all duration-500 lg:h-[650px] lg:w-[600px] mx-auto"
         >
           <Image
             src="/header-image.webp"
